@@ -6,7 +6,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: Text(
+            "Home Page"),
       ),
       body: Center(
         child: Column(
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
               "We are in the home page here",
               style: TextStyle(
                 fontSize: 22,
+                color: Colors.blueGrey
               ),
             ),
 
@@ -31,7 +33,10 @@ class HomeScreen extends StatelessWidget {
             )
           ],
         ),
+
       ),
     );
   }
+
+
 }

@@ -13,7 +13,10 @@ class DetailsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget> [
-            Text("We are in the details page here"
+            Text("We are in the details page here",
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.blueGrey),
             ),
             FloatingActionButton(
               child: Icon(Icons.arrow_back),
