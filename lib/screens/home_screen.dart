@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navegacao_luciana/screens/otherscreen.dart';
 import 'details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,21 +15,33 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              "We are in the home page here",
+              "Primeira Página",
               style: TextStyle(
-                fontSize: 22,
-                color: Colors.blueGrey
+                  fontSize: 22,
+                  color: Colors.blueGrey
               ),
             ),
 
             RaisedButton(
-              child: Text("Go to details page"),
+              child: Text("Ir para segunda página"),
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => DetailsScreen(),
-                    ));
+                    )
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("Other Page"),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => OtherScreen(),
+                    )
+                );
               },
             )
           ],

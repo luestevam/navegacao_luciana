@@ -13,8 +13,8 @@ class DetailsScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget> [
-            Text("We are in the details page here",
-                style: TextStyle(
+            Text("Segunda página",
+              style: TextStyle(
                   fontSize: 22,
                   color: Colors.blueGrey),
             ),

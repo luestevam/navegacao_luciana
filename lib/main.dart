@@ -10,8 +10,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Meus Widgets",
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: Color.fromARGB(255, 4, 125, 145),
+          primarySwatch: Colors.blue,
+          primaryColor: Color.fromARGB(255, 4, 125, 145),
           fontFamily: 'Mukutu',
           textTheme: GoogleFonts.muktaMaheeTextTheme(
             Theme.of(context).primaryTextTheme,
