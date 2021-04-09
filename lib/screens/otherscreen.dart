@@ -14,6 +14,7 @@ class _OtherPageState extends State<OtherPage> {
       context: context,
       builder: (context) => AlertDialog(
         title: Text('Deseja Sair?'),
+
         actions: [
           ElevatedButton(
             child: Text('Sim'),
