@@ -1,40 +1,48 @@
 import 'package:flutter/material.dart';
 
-class OtherScreen extends StatelessWidget {
+class OtherPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
+  _OtherPageState createState() => _OtherPageState();
+}
 
-    Future<bool> _requestPop(BuildContext context){
-      return showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text ('Deseja Sair?'),
-          actions:[
-            GestureDetector(
-              onTap: () => Navigator.of(context).pop(false),
-              child: Text ('Não'),
-            ),
-            SizedBox(height: 16.0),
-            GestureDetector(
-              onTap: () => Navigator.of(context).pop(true),
-              child: Text ('Sim'),
-            ),
-          ],
-        ),
-      ) ??
-          false;
-    }
+class _OtherPageState extends State<OtherPage> {
 
+  Future<bool> _requestPop(BuildContext context) async {
+    bool exit = false;
 
-    return WillPopScope (
-      onWillPop: () => _requestPop(context),
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text("Other Page"),
-        )
+    await showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Deseja Sair?'),
+        actions: [
+          ElevatedButton(
+            child: Text('Sim'),
+            onPressed: () {
+              exit = true;
+              Navigator.of(context).pop();
+            },
+          ),
+          ElevatedButton(
+            child: Text('Não'),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+        ],
       ),
     );
+
+    return exit;
   }
 
-
+  @override
+  Widget build(BuildContext context) {
+    return WillPopScope(
+      onWillPop: () async {
+        return await _requestPop(context);
+      },
+      child: Scaffold(
+          appBar: AppBar(
+        title: Text("Other Page"),
+      )),
+    );
+  }
 }

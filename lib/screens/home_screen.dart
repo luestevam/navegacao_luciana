@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navegacao_luciana/screens/otherscreen.dart';
+import 'package:navegacao_luciana/screens/terceira_page.dart';
 import 'details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -34,12 +35,12 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text("Other Page"),
+              child: Text("TerceiraPage"),
               onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => OtherScreen(),
+                      builder: (context) => OtherPage(),
                     )
                 );
               },
