@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text("Ir para segunda página"),
+              child: Text("Ir para segunda Página"),
               onPressed: () {
                 Navigator.push(
                     context,
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             RaisedButton(
-              child: Text("Ir Para Terceira Pagina"),
+              child: Text("Ir Para Terceira Página"),
               onPressed: () {
                 Navigator.push(
                     context,

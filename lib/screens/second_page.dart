@@ -6,14 +6,14 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Segunda página"),
+        title: Text("Segunda Página"),
       ),
       body: Center(
 
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget> [
-            Text("Segunda página",
+            Text("Segunda Página",
               style: TextStyle(
                   fontSize: 22,
                   color: Colors.blueGrey),
