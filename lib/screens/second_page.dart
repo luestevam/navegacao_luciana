@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:navegacao_luciana/screens/third_page.dart';
 
 class SecondPage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,7 +10,6 @@ class SecondPage extends StatelessWidget {
         title: Text("Segunda Página"),
       ),
       body: Center(
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget> [
@@ -18,7 +18,9 @@ class SecondPage extends StatelessWidget {
                   fontSize: 22,
                   color: Colors.blueGrey),
             ),
-            RaisedButton(
+
+
+          RaisedButton(
               child: Text("Voltar"),
               onPressed: () {
                 Navigator.pop(context);
@@ -36,7 +38,6 @@ class SecondPage extends StatelessWidget {
                 );
               },
             ),
-
 
 
           ],

@@ -3,8 +3,6 @@ import 'package:navegacao_luciana/screens/home_screen.dart';
 import 'package:navegacao_luciana/screens/second_page.dart';
 
 class FirstPage extends StatelessWidget {
-  get children => null;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +23,9 @@ class FirstPage extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(10.0),
                   child: FlatButton(
-                    child: Text("Voltar"),
+                    child: Text("Voltar Home"),
                     color: Colors.blueAccent,
+                    textColor: Colors.white,
                     onPressed: () {
                       Navigator.push(
                           context,
@@ -39,8 +38,9 @@ class FirstPage extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(10.0),
                   child: FlatButton(
-                    child: Text("Seguir"),
+                    child: Text("Segunda Página"),
                     color: Colors.blueAccent,
+                    textColor: Colors.white,
                     onPressed: () {
                       Navigator.push(
                           context,

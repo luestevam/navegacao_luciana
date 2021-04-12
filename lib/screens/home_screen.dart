@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:navegacao_luciana/screens/bem_vindo.dart';
 import 'package:navegacao_luciana/screens/first_page.dart';
 import 'package:navegacao_luciana/screens/third_page.dart';
 import 'second_page.dart';
 
 class HomeScreen extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,16 +15,16 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
-          onPressed: (){
+          onPressed: () {
             final can = Navigator.canPop(context);
             if (can) {
               Navigator.pop(context);
-            }else {
-              print("This Page cannot be closed");
+            } else {
+              print("This Page cannot be back");
             }
           },
         ),
-          ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -30,6 +33,16 @@ class HomeScreen extends StatelessWidget {
               "Home Página",
               style: TextStyle(fontSize: 22, color: Colors.blueGrey),
             ),
+
+            RaisedButton(
+              child: Text(" Ir Página Bem Vindo"),
+              onPressed: (){
+                Navigator.push(context,
+                    MaterialPageRoute(
+                        builder: (context)=> BemVindo(page: 'Você veio da Home',)));
+              },
+            ),
+
             RaisedButton(
               child: Text("Ir para Primeira página"),
               onPressed: () {
@@ -37,8 +50,7 @@ class HomeScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => FirstPage(),
-                    )
-                );
+                    ));
               },
             ),
             RaisedButton(
@@ -58,10 +70,12 @@ class HomeScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => ThirdPage(),
-                    )
-                );
+                    ));
               },
             ),
+
+
+
 
           ],
         ),

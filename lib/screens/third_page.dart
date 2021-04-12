@@ -7,6 +7,7 @@ import 'home_screen.dart';
 
 
 class ThirdPage extends StatefulWidget {
+
   @override
   _ThirdPageState createState() => _ThirdPageState();
 }
@@ -19,14 +20,17 @@ class _ThirdPageState extends State<ThirdPage> {
     await showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Voltar?'),
+        title: Text('Voltar para home?'),
 
         actions: [
           ElevatedButton(
             child: Text('Sim'),
             onPressed: () {
-              exit = true;
-              Navigator.of(context).pop();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HomeScreen(),
+                  ));
             },
           ),
           ElevatedButton(
@@ -35,7 +39,7 @@ class _ThirdPageState extends State<ThirdPage> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomeScreen(),
+                    builder: (context) => ThirdPage(),
                   )
               );
             },
@@ -49,7 +53,7 @@ class _ThirdPageState extends State<ThirdPage> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
+      return WillPopScope(
       onWillPop: () async {
         return await _requestPop(context);
       },
@@ -57,6 +61,8 @@ class _ThirdPageState extends State<ThirdPage> {
           appBar: AppBar(
         title: Text("Terceira Página"),
       ),
+
+
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -65,6 +71,9 @@ class _ThirdPageState extends State<ThirdPage> {
                 "Terceira Página",
                 style: TextStyle(fontSize: 22, color: Colors.blueGrey),
               ),
+
+
+
               RaisedButton(
                 child: Text("Ir para primeira página"),
                 onPressed: () {
@@ -72,9 +81,11 @@ class _ThirdPageState extends State<ThirdPage> {
                       context,
                       MaterialPageRoute(
                         builder: (context) => FirstPage(),
-                      ));
+                      )
+                  );
                 },
               ),
+
               RaisedButton(
                 child: Text("Ir para segunda página"),
                 onPressed: () {
