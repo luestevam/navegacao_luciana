@@ -18,15 +18,16 @@ class SecondPage extends StatelessWidget {
                   fontSize: 22,
                   color: Colors.blueGrey),
             ),
-            FloatingActionButton(
-              child: Icon(Icons.arrow_back),
+            RaisedButton(
+              child: Text("Voltar"),
               onPressed: () {
                 Navigator.pop(context);
               },
             ),
-            FloatingActionButton(
-              child: Icon(Icons.arrow_forward),
-              onPressed: () {
+
+            RaisedButton(
+              child: Text("Ir para terceira página"),
+                onPressed: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(

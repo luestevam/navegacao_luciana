@@ -19,7 +19,7 @@ class _ThirdPageState extends State<ThirdPage> {
     await showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Voltar para pagina inicial?'),
+        title: Text('Voltar?'),
 
         actions: [
           ElevatedButton(
